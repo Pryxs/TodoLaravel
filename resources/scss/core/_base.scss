@@ -1,0 +1,14 @@
+body{
+    background-color: $secondary-color;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: $text-color;
+
+    h1, H2, h3, h4, h5, h6{
+        font-family: Tahoma, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+}

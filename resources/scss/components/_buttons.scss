@@ -1,0 +1,33 @@
+.button{
+    padding: .5em 1em;
+    border-radius: 5px;
+    transition: .3s ease-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: $text-color;
+    font-size: 1rem;
+    width: fit-content;
+    display: block;
+
+    &.-primary{
+        background-color: $dynamic-color;
+        color: $primary-color;
+        border: none;
+
+        &:hover{
+            filter: brightness(115%);
+            transition: .3s ease-in-out;
+        }
+    }
+
+    &.-secondary{
+        border: 1px solid $dynamic-color;
+        background-color: $secondary-color;
+
+        &:hover{
+            background-color: $dynamic-color;
+            transition: .3s ease-in-out;
+            color: $primary-color;
+        }
+    }
+}

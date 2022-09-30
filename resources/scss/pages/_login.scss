@@ -1,0 +1,9 @@
+.login-container{
+    @include absolute-center;
+    top: 40%;
+
+    h1{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}

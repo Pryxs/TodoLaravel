@@ -1,0 +1,29 @@
+.form{
+    background-color: $primary-color;
+    border-radius: 5px;
+    padding: 2rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    
+    &_actions{
+        display: flex;
+        justify-content: end;
+        gap: .5em;
+        margin-top: 1rem;
+    }
+
+    &_field{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    &_error{
+        display: inline;
+        color: $alert-color;
+        font-style: italic;
+        font-size: .8rem;
+    }
+}
