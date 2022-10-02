@@ -1,0 +1,24 @@
+.list{
+    margin-top: 2rem;
+    background: $primary-color;
+    padding: .5rem;
+
+    li{
+        background: $secondary-color;
+        padding: .5em 1em;
+
+        &:not(:last-child){
+            margin-bottom: .5rem;
+        }
+        
+        a{
+            font-size: 1.5rem;
+            width: 100%;
+            display: block;
+        }
+
+        h4{
+            margin-bottom: .5em;
+        }
+    }
+}

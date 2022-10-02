@@ -9,8 +9,14 @@
 
 @import "components/buttons",
     "components/input",
-    "components/form";
+    "components/form",
+    "components/header",
+    "components/list",
+    "components/alert";
+
 
 
 @import "pages/login",
-    "pages/register";
+    "pages/register",
+    "pages/home",
+    "pages/todolist";

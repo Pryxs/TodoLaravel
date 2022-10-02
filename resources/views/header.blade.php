@@ -26,6 +26,6 @@
         <header>
             @auth
                 <a href="/logout">Deconnexion</a> 
-                <span>connecté en tant que {{Auth::user()->email}}</span>
+                <span>{{Auth::user()->email}}</span>
             @endauth
         </header>

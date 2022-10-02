@@ -24,7 +24,6 @@ class TodolistController extends Controller
         request()->validate([
             'title' => ['required'],
             'todolist_id' => ['required'],
-            'description' => []
         ]);
     
         $todoitem = Todoitem::create([
