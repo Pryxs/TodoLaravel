@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TodolistController;
 
 
 /*
@@ -12,8 +13,14 @@ use App\Http\Controllers\HomeController;
 |--------------------------------
 */
 
-Route::get('/', [HomeController::class, 'getHomePage']);
-
+Route::group([
+    'middleware' => 'App\Http\Middleware\Auth',
+], function(){
+    Route::get('/', [HomeController::class, 'getHomePage']);
+    Route::post('/', [HomeController::class, 'storeTodolist']);
+    Route::get('/todolist/{id}', [TodolistController::class, 'getTodolistPage']);
+    Route::post('/todolist/{id}', [TodolistController::class, 'storeTodoItem']);
+});
 
 
 /*
