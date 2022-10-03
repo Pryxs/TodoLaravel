@@ -15,6 +15,12 @@
                             @if($todoitem->description)
                                 <p>{{$todoitem->description}}</p> 
                             @endif   
+
+                            <form class="checkbox-form" action="/todolist/{{$todolist->id}}/update" method="POST">
+                                @csrf
+                                <input type="hidden" name="todoitem_id" value="{{$todoitem->id}}"/>
+                                <input type="checkbox" name="done" {{$todoitem->done ? "checked" : ""}} />
+                            </form>
                         </li>
                     @endforeach
                 </ul>

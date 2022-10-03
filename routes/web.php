@@ -20,6 +20,7 @@ Route::group([
     Route::post('/', [HomeController::class, 'storeTodolist']);
     Route::get('/todolist/{id}', [TodolistController::class, 'getTodolistPage']);
     Route::post('/todolist/{id}', [TodolistController::class, 'storeTodoItem']);
+    Route::post('/todolist/{id}/update', [TodolistController::class, 'updateTodoItem']);
 });
 
 

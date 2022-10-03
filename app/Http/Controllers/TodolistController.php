@@ -34,4 +34,24 @@ class TodolistController extends Controller
 
         return back();
     }
+
+    public function updateTodoItem(){
+        request()->validate([
+            // 'done' => ['accepted'],
+            'todoitem_id' => ['required'],
+        ]);
+        $test = null;
+
+        if(request("done")){
+            $todoitem = Todoitem::where('id', request('todoitem_id'))->update([
+                'done' => 1,
+            ]);        
+        } else {
+            $todoitem = Todoitem::where('id', request('todoitem_id'))->update([
+                'done' => 0,
+            ]);   
+        }
+
+        return back();
+    }
 }
